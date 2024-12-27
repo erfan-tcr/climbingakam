@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باشگاه کوهنوردی اکام</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            text-align: center;
+            background: #0056b3;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>باشگاه کوهنوردی اکام</h1>
+        <p>همراه با ما، قله‌ها را فتح کنید</p>
+    </header>
+    <nav>
+        <a href="#about">درباره ما</a>
+        <a href="#programs">برنامه‌ها</a>
+        <a href="#register">ثبت‌نام</a>
+    </nav>
+
+    <div class="container" id="about">
+        <h2>درباره ما</h2>
+        <p>باشگاه کوهنوردی اکام با هدف ترویج ورزش کوهنوردی و فتح قله‌های زیبای ایران و جهان در خدمت شماست.</p>
+    </div>
+
+    <div class="container" id="programs">
+        <h2>برنامه‌های باشگاه</h2>
+        <ul>
+            <li>صعود به دماوند - تاریخ: ۱۵ تیر ۱۴۰۳</li>
+            <li>پیاده‌روی در جنگل‌های شمال - تاریخ: ۲۵ مرداد ۱۴۰۳</li>
+            <li>صعود به علم‌کوه - تاریخ: ۱۰ شهریور ۱۴۰۳</li>
+        </ul>
+    </div>
+
+    <div class="container" id="register">
+        <h2>ثبت‌نام در برنامه‌ها</h2>
+        <form action="/submit" method="POST">
+            <label for="fullname">نام و نام خانوادگی:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="نام خود را وارد کنید" required>
+
+            <label for="email">ایمیل:</label>
+            <input type="email" id="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+
+            <label for="phone">شماره تماس:</label>
+            <input type="tel" id="phone" name="phone" placeholder="شماره تماس خود را وارد کنید" required>
+
+            <label for="insurance">آیا بیمه ورزشی دارید؟</label>
+            <select id="insurance" name="insurance" required>
+                <option value="">انتخاب کنید</option>
+                <option value="yes">بله</option>
+                <option value="no">خیر</option>
+            </select>
+
+            <label for="program">انتخاب برنامه:</label>
+            <select id="program" name="program" required>
+                <option value="">انتخاب کنید</option>
+                <option value="damavand">صعود به دماوند</option>
+                <option value="forest">پیاده‌روی در جنگل‌های شمال</option>
+                <option value="alam">صعود به علم‌کوه</option>
+            </select>
+
+            <button type="submit">ثبت‌نام</button>
+        </form>
+    </div>
+</body>
+</html>
